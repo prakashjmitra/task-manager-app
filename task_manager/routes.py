@@ -94,6 +94,7 @@ def account():
 
 @app.route("/post/new", methods=['GET', 'POST'])
 @login_required
+#Use date_due as a way to force user to put a end date for the task
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
